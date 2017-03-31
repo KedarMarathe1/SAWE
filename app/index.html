@@ -1,35 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
+<!doctype html>
+<html>
+  <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SAWE</title>
     <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Agency - Start Bootstrap Theme</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="../Bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="../Bootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <!--<link href="styles/main.css" rel="stylesheet">-->
+    <!-- endbuild -->
+    <link href="styles/Bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/Bootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
-    <!-- Theme CSS -->
-    <link href="../Bootstrap/css/agency.min.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
-    <![endif]-->
+    <link href="styles/Bootstrap/css/agency.min.css" rel="stylesheet">
 
 </head>
 
@@ -44,7 +34,7 @@
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top" style="font-family:Helvetica;padding-top: 0px;padding-bottom: 0px">
-                <img src="../Bootstrap/img/logo.png" class="img-responsive" alt="" width="60" height="60" >
+                <img src="styles/Bootstrap/img/logo.png" class="img-responsive" alt="" width="60" height="60" >
                 </a>
             </div>
 
@@ -80,7 +70,7 @@
     </nav>
 
     <!-- Header -->
-    <header style="padding-top: 100px;">
+    <header style="padding-top: 200px;">
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in">Welcome To SAWE!</div>
@@ -90,96 +80,52 @@
         </div>
     </header>
 
+
+    
+    <div ng-controller="DataCtrl">
     <!-- Services Section -->
-    <section id="services">
+    <section id="services" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">About SAWE</h2>
-                     <img src="../Bootstrap/img/logo.png" class="img-responsive" alt="" width="150" height="150" style="margin-left: auto;margin-right: auto">
-                    <h3 class="section-subheading text-muted">SAWE- Study and Awareness of Wildlife and Environment</h3>
+                     <img src="styles/Bootstrap/img/logo.png" class="img-responsive" alt="" width="150" height="150" style="margin-left: auto;margin-right: auto">
+                    <h3 class="section-heading">SAWE- Study and Awareness of Wildlife and Environment</h3>
+                    <br>
                 </div>
             </div>
-           <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                      <img src="../Bootstrap/img/research.jpg" class="img-responsive" alt="">
-                        
-                    </span>
-                    <h4 class="service-heading">Wildlife Research </h4>
-                    <p class="text-muted">SAWE is working on several research Projects like Human-Wildlife Interaction, Crocodile project and also have colaborated with other NGO with research projects</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <img src="../Bootstrap/img/rescue.jpg" class="img-responsive" alt="">
-                    </span>
-                    <h4 class="service-heading">Wild Animals Rehabilitation</h4>
-                    <p class="text-muted">Some members of SAWE are trained wildlife rescuers which actively participate in Wild Animals rescue operations(Animals like Crocodiles,Snakes,Civet Cats,Porcupines and many more) and relocate them into their natural Habitat</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <img src="../Bootstrap/img/outreach.jpeg" class="img-responsive" alt="">
-                    </span>
-                    <h4 class="service-heading">Outreach Programs</h4>
-                    <p class="text-muted">SAWE has conducted outreach programs in more than 25 schools till date. We also conduct awareness sessions in areas where Human-Wildlife conflict is at its peak to reduce the intesity</p>
+           <div class="row text-center" ng-repeat="AboutUsData in AboutUsRows">
+                <div class="col-md-4" ng-repeat="post in AboutUsData">
+                      <img ng-src="{{post.Image}}" class="img-responsive" alt="">
+                    <h4 class="service-heading">{{post.Title}} </h4>
+                    <p class="text-muted">{{post.Description}} </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Grid Section -->
-   <section id="portfolio" class="bg-light-gray">
+   <section id="portfolio" class="bg-light-gray" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Projects</h2>
-                    <h3 class="section-subheading text-muted">Project we have been working on till date</h3>
+                    <h2 class="section-heading">Projects </h2>
+                    <h3 class="section-subheading text-muted">Project we have been working on till date </h3>
                 </div>
             </div>
-            <div class="row">
-
-
-                <div class="col-md-4 col-sm-6 portfolio-item">
+            <div class="row" ng-repeat="ProjectData in ProjectRows">
+                <div class="col-md-4 col-sm-6 portfolio-item" ng-repeat="project in ProjectData">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="../Bootstrap/img/portfolio/CrocodileProject.jpg" class="img-responsive" alt="">
+                        <img ng-src="{{project.Image}}" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Crocodile Project</h4>
-                        <p class="text-muted">Study Crocodile habitats and their Nesting process</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="../Bootstrap/img/portfolio/HumanWildlifeConflict.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Human Wildlife Interaction</h4>
-                        <p class="text-muted">finding a way for humans to live in harmony with the wildlife</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="../Bootstrap/img/portfolio/Rescue.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Wildlife Rescues</h4>
-                        <p class="text-muted">Relocation of Wild Animals from Human settlements</p>
+                        <h4>{{project.Title}} </h4>
+                        <p class="text-muted">{{project.Description}}</p>
                     </div>
                 </div>
          
@@ -199,48 +145,21 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="timeline">
-                        <li>
+                        <li ng-repeat="achievement in Achievements"  ng-class-odd ="'timeline-inverted'">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="../Bootstrap/img/about/1.png" alt="">
+                                <img class="img-circle img-responsive" ng-src="{{achievement.Image}}" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>2013</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
+                                    <h4 class="subheading">{{achievement.Title}}</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Came together a bunch of wildlife enthusiasts who were concerned about the betterment and conservation of Environment</p>
+                                    <p class="text-muted">{{achievement.Details}} </p>
                                 </div>
                             </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="../Bootstrap/img/about/2.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2013</h4>
-                                    <h4 class="subheading">Colaboration with ARS</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">SAWE colaborated with Animal Rescue Squad- An NGO working day and Night in wildlife rescue  </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="../Bootstrap/img/about/3.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2015</h4>
-                                    <h4 class="subheading">Over 25 Schools are now Aware</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">SAWE successfully conducted more than 50 Awareness programs in over 25 schools in different parts of GOA</p>
-                                </div>
-                            </div>
-                        </li>
+                        </li>             
+                     
                    
                         <li class="timeline-inverted">
                             <div class="timeline-image">
@@ -264,60 +183,30 @@
                     <h3 class="section-subheading text-muted">People from different backgrounds work together as helping hands to conserve nature.</h3>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-3">
+            <div class="row" ng-repeat="Row in Team">
+               <div class="col-sm-3" ng-repeat="member in Row">
                     <div class="team-member">
-                        <img src="../Bootstrap/img/team/charan.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Charan Dessai</h4>
-                        <p class="text-muted">President</p>
-                        <h3><p class="text-muted">A successful businessman who is keen about wildlife and conservation</p> </h3>
-                   
+                        <img ng-src="{{member.Image}}" class="img-responsive img-circle" alt="">
+                        <h4>{{member.Name}} </h4>
+                        <p class="text-muted">{{member.Designation}}  </p>
+                        <h3><p class="text-muted">{{member.About}}</p> </h3>
                     </div>
                 </div>
-              
-                <div class="col-sm-3">
-                    <div class="team-member">
-                        <img src="../Bootstrap/img/team/Vaisakh.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Vaisakh Nair</h4>
-                        <p class="text-muted">Associate and Treasurer</p>
-                        <h3><p class="text-muted">An Engineer working as a wildlife rescuer and researcher for past 4 years</p> </h3>
-                       
-                    </div>
-                </div>
-
-                   <div class="col-sm-3">
-                    <div class="team-member">
-                        <img src="../Bootstrap/img/team/kedar.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Kedar Marathe</h4>
-                        <p class="text-muted">Associate and Photographer</p>
-                        <h3><p class="text-muted">An IT Professional working as a wildlife rescuer and researcher for over 4 years</p> </h3>
-                    
-                    </div>
-                </div>
-
-                   <div class="col-sm-3">
-                    <div class="team-member">
-                        <img src="../Bootstrap/img/team/gayatriD.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Gayatri Dessai jambhale</h4>
-                        <p class="text-muted">Associate and Secretory</p>
-                        <h3><p class="text-muted">A pharma employee working with sawe for past 3 years</p> </h3>
-                   
-                    </div>
-                </div>
-
             </div>
 
            <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                   <h3> <p class="large text-muted">Helping Hands</p></h3>
+                   <h3 class="section-heading"> Helping Hands</h3>
                 </div>
             </div>
-               <div class="col-sm-2">
-                    <div class="team-member">
-                        <img src="../Bootstrap/img/team/gayatriB.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Gayatri Bakhale</h4>
-                        <p class="text-muted">Post graduate in Environmental Science workingon several research projects</p> 
+                <div class="row" ng-repeat="Row in helpingHands">
+                <div class="col-sm-2" ng-repeat="helper in Row" >
+                    <div class="team-member" >
+                        <img ng-src="{{helper.Image}}" class="img-responsive img-circle" alt="">
+                        <h4>{{helper.Name}} </h4>
+                        <p class="text-muted">{{helper.About}} </p> 
                     </div>
+                </div>
                 </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -372,14 +261,14 @@
             </div>
         </div>
     </section>
-
+    </div>
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <span class="copyright">Copyright &copy; SAWE 2017</span>
                 </div>
-                <div class="col-md-4">
+                <!--<div class="col-md-4">
                     <ul class="list-inline social-buttons">
                         <li><a href="#"><i class="fa fa-twitter"></i></a>
                         </li>
@@ -388,7 +277,7 @@
                         <li><a href="#"><i class="fa fa-linkedin"></i></a>
                         </li>
                     </ul>
-                </div>
+                </div>-->
                 
             </div>
         </div>
@@ -414,7 +303,7 @@
                                 <!-- Project Details Go Here -->
                                 <h2>Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="../Bootstrap/img/portfolio/roundicons-free.png" alt="">
+                                <img class="img-responsive img-centered" src="styles/Bootstrap/img/portfolio/roundicons-free.png" alt="">
                                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                 <p>
                                     <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
@@ -441,41 +330,40 @@
 
 
     <!-- jQuery -->
-    <script src="../Bootstrap/vendor/jquery/jquery.min.js"></script>-->
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../Bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="../Bootstrap/js/jqBootstrapValidation.js"></script>
-    <script src="../Bootstrap/js/contact_me.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="../Bootstrap/js/agency.min.js"></script>
+    
 
 
-
-    <!--<script src="bower_components/jquery/dist/jquery.js"></script>-->
-    <script src="../bower_components/angular/angular.js"></script>
-    <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
-    <script src="../bower_components/angular-animate/angular-animate.js"></script>
-    <script src="../bower_components/angular-aria/angular-aria.js"></script>
-    <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="../bower_components/angular-messages/angular-messages.js"></script>
-    <script src="../bower_components/angular-resource/angular-resource.js"></script>
-    <script src="../bower_components/angular-route/angular-route.js"></script>
-    <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="../bower_components/angular-touch/angular-touch.js"></script>
+  <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+    <script src="styles/Bootstrap/vendor/jquery/jquery.min.js"></script>-->
+    <script src="styles/Bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+    <script src="styles/Bootstrap/js/jqBootstrapValidation.js"></script>
+    <script src="styles/Bootstrap/js/contact_me.js"></script>
+    <script src="styles/Bootstrap/js/agency.min.js"></script>
+
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/DataCtrl.js"></script>
+
+        <!-- endbuild -->
 
 </body>
 
