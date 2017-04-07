@@ -21,8 +21,15 @@
                     "About":"AN IT PROFESSIONAL WORKING AS A WILDLIFE RESCUER AND RESEARCHER FOR OVER 4 YEARS",
                     "Image":"styles/Bootstrap/img/team/kedar.jpg"
                 },
-                {
+                  {
                     "MemberId" : "4",
+                    "Name":"Sandesh Amonkar",
+                    "Designation":"Associate and founder",
+                    "About":"HAS BEEN WORKING IN WILDLIFE RESCUE FOR ABOUT 10 YEARS",
+                    "Image":"styles/Bootstrap/img/team/sandesh.jpg"
+                },
+                {
+                    "MemberId" : "5",
                     "Name":"Gayatri Dessai jambhale",
                     "Designation":"Associate and Secretory",
                     "About":"A PHARMA EMPLOYEE WORKING WITH SAWE FOR PAST 3 YEARS",
@@ -31,10 +38,16 @@
          ],
     "helpingHands":[
                     {
-                        "MemberId" : "5",
+                        "MemberId" : "10",
                         "Name":"Gayatri Bakhale",
-                        "About":"Post graduate in Environmental Science workingon several research projects",
+                        "About":"Post graduate in Environmental Science working on several research projects",
                         "Image":"styles/Bootstrap/img/team/gayatriB.jpg"
+                    },
+                     {
+                        "MemberId" : "11",
+                        "Name":"Apurva Prabhudessai",
+                        "About":"CS degree holder helping in outreach and awareness",
+                        "Image":"styles/Bootstrap/img/team/apurva.jpg"
                     }
                 
     ]               

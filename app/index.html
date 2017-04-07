@@ -70,7 +70,7 @@
     </nav>
 
     <!-- Header -->
-    <header style="padding-top: 200px;">
+    <header style="padding-top: 250px;">
         <div class="container">
             <div class="intro-text">
                 <div class="intro-heading">Welcome to SAWE</div>
@@ -98,8 +98,8 @@
            <div class="row text-center" ng-repeat="AboutUsData in AboutUsRows">
                 <div class="col-md-4" ng-repeat="post in AboutUsData">
                       <img ng-src="{{post.Image}}" class="img-responsive" alt="">
-                    <h4 class="service-heading">{{post.Title}} </h4>
-                    <p class="text-muted">{{post.Description}} </p>
+                    <h3 class="service-heading">{{post.Title}} </h3>
+                    <p style="font-family: Verdana, Geneva, sans-serif">{{post.Description}} </p>
                 </div>
             </div>
         </div>
@@ -126,7 +126,7 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>{{project.Title}} </h4>
-                        <p class="text-muted">{{project.Description}}</p>
+                        <p class="text-muted"  style="font-family: Verdana, Geneva, sans-serif">{{project.Description}}</p>
                     </div>
                 </div>
          
@@ -156,7 +156,7 @@
                                     <h4 class="subheading">{{achievement.Title}}</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">{{achievement.Details}} </p>
+                                    <p  style="font-family: Verdana, Geneva, sans-serif" class="text-muted">{{achievement.Details}} </p>
                                 </div>
                             </div>
                         </li>             
@@ -211,7 +211,7 @@
                 </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">We stand together for the conservation and protection of mother nature.</p>
+                    <h3><p class="large">We stand together for the conservation and protection of mother nature.</p></h3>
                 </div>
             </div>
         </div>
@@ -302,8 +302,9 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <!--<h2>Project Name</h2>-->
+                               <p> <h1>Coming soon......</h1></p>
+                                <!--<p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                 <img class="img-responsive img-centered" src="styles/Bootstrap/img/portfolio/roundicons-free.png" alt="">
                                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                 <p>
@@ -312,7 +313,7 @@
                                     <li>Date: July 2014</li>
                                     <li>Client: Round Icons</li>
                                     <li>Category: Graphic Design</li>
-                                </ul>
+                                </ul>-->
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
                         </div>
@@ -338,7 +339,6 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-aria/angular-aria.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
@@ -351,11 +351,8 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-
-    <script src="styles/Bootstrap/vendor/jquery/jquery.min.js"></script>-->
     <script src="styles/Bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
-    <script src="styles/Bootstrap/js/jqBootstrapValidation.js"></script>
+   <script src="styles/Bootstrap/js/jqBootstrapValidation.js"></script>
     <script src="styles/Bootstrap/js/contact_me.js"></script>
     <script src="styles/Bootstrap/js/agency.min.js"></script>
 
@@ -363,6 +360,12 @@
         <!--<script src="scripts/controllers/DataCtrl.js"></script>-->
 
         <!-- endbuild -->
+
+
+    <!--<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>-->
+    <!--<script src="styles/Bootstrap/vendor/jquery/jquery.min.js"></script>-->-->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+    
 
 </body>
 
