@@ -33,6 +33,7 @@ angular
    .controller('DataCtrl',['$scope','$http', function ($scope,$http) {
 
       $http.get('Data/Projects.json').then(function(result){
+           $scope.Projects = result.data;
           $scope.ProjectRows =$scope.getRows(result.data,3);
            
 
@@ -40,7 +41,6 @@ angular
 
          $http.get('Data/AboutUs.json').then(function(result){
           $scope.AboutUsRows= $scope.getRows(result.data,3);
-          console.log($scope.ProjectRows);
       });
 
         $http.get('Data/Achievements.json').then(function(result){
@@ -65,6 +65,22 @@ angular
             }
             return arr;
         }
+
+        $scope.projectDetails= function(id){
+          $scope.projectData = getById( $scope.Projects,id)
+          console.log( $scope.projectData);
+        };
+
+
+
+        function getById(arr, id) {
+            for (var d = 0, len = arr.length; d < len; d += 1) {
+                if (arr[d].projectId === id) {
+                    return arr[d];  
+                }
+            }
+        }
+
   }]);
 
   

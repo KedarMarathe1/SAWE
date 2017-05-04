@@ -1,24 +1,46 @@
 [
 { 
   "projectId":"1",
-  "Title":"Crocodile Project",
+  "Title":"The Mugger Project",
   "Description":"Study Crocodile habitats and their Nesting process",
-  "Details":"sadsdsdsdsdsd",
-  "Image":"styles/Bootstrap/img/portfolio/CrocodileProject.jpg"
+  "Details":"We are working on the crocodile study and their nesting habits throughout Goa.Volunteers from different background are working with us to help conserve this threatened species",
+  "Image":"styles/Bootstrap/img/portfolio/CrocodileProject.jpg",
+  "Purpose":"The purpose of this project is mainly conservation of habitat of this critical species. This also inclues detailed study of nesting habits,food and interaction with Humans.",
+  "Objectives":[{"ObjectiveId":"11", "data":"Detailed study of Crocodiles"},
+                {"ObjectiveId":"12", "data":"Study their Nesting habits"},
+                {"ObjectiveId":"13", "data":"Identify potential threats"},
+                {"ObjectiveId":"14", "data":"Create public awareness about crocodiles"}],
+  "Conclusions":[{"ConclusionId":"11", "data":"Marsh water crocodiles nests during DECEMBER-FEBRUARY usually in a sandy area"},
+                 {"ConclusionId":"12", "data":"The female usually lays 25 to 30 eggs"},
+                 {"ConclusionId":"13", "data":"Temperature of the nest has a huge impact on the sex of the juveniles"},
+                 {"ConclusionId":"14", "data":"Crocodiles are found to be very aggressive during nesting time"}]
 },
 {
   "projectId":"2",
   "Title":"Human Wildlife Interaction",
   "Description":"finding a way for humans to live in harmony with the wildlife",
-  "Details":"sadsdsdsdsdsd",
-  "Image":"styles/Bootstrap/img/portfolio/HumanWildlifeConflict.jpg"
+  "Details":"WE mainly focus on how wildlife intereacts with humans and the way people react to it.We conduct presentations to create awareness among people about the wildlife that exists around us and make people tolerent about its existance",
+  "Image":"styles/Bootstrap/img/portfolio/HumanWildlifeConflict.jpg",
+  "Purpose":"Creating awareness and finding solutions to the repeated Human-Wildlife interactions which may turn out as a threat to both, Humans and Wild Animals",
+  "Objectives":[{"ObjectiveId":"21", "data":"Detailed study of Human-Wildlife Interaction"},
+                {"ObjectiveId":"22", "data":"Create Awareness"},
+                {"ObjectiveId":"23", "data":"Identify conflict scenarios and find solutions"}],
+  "Conclusions":[{"ConclusionId":"21", "data":"There is an intereaction between Humans and Wild Animals on a regular basis"},
+                 {"ConclusionId":"22", "data":"People have improvised their methods to avoid conflict"},
+                 {"ConclusionId":"23", "data":"Some people have a buffer zone to avoid conflicts (for example- growing extra crop or laying aside some fish to drive animals away from the main source)"}]
 },
 {
   "projectId":"3",
   "Title":"Willife Rescues",
   "Description":"Relocation of Wild Animals from Human settlements",
-  "Details":"sadsdsdsdsdsd",
-  "Image":"styles/Bootstrap/img/portfolio/Rescue.jpg"    
+  "Details":"Wild animals wander into the Human settlements at times which possesses a threat to their lives.We make sure these animals are relocated back to their habitat without any harm to them as well as Humans.",
+  "Image":"styles/Bootstrap/img/portfolio/Rescue.jpg" ,
+  "Purpose":"Relocation of wild animals back to their respective habitats by trained professionals",
+  "Objectives":[{"ObjectiveId":"31", "data":"Rescue and release of Wild animals"},
+                {"ObjectiveId":"32", "data":"Save lives by creating awareness"},
+                {"ObjectiveId":"33", "data":"study possible species distribution"}],
+  "Conclusions":[{"ConclusionId":"31", "data":"There is a constant conflict between Human and Wild animals, especially Reptiles"},
+                 {"ConclusionId":"32", "data":"Relocation of Animals doesnt always help as some species are highly territorial"}]  
 }
 
 ]
